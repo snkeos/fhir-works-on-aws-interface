@@ -25,15 +25,18 @@ export interface BatchReadWriteRequest {
     // GET requests, only contains the URL of the resource
     fullUrl?: string;
     references?: Reference[];
+    tenantId?: string;
 }
 
 export interface BatchRequest {
     requests: BatchReadWriteRequest[];
     startTime: Date;
+    tenantId?: string;
 }
 export interface TransactionRequest {
     requests: BatchReadWriteRequest[];
     startTime: Date;
+    tenantId?: string;
 }
 
 // TODO all required?
@@ -44,6 +47,7 @@ export interface BatchReadWriteResponse {
     operation: TypeOperation | SystemOperation;
     resource: any;
     lastModified: string;
+    tenantId?: string;
 }
 
 export type BatchReadWriteErrorType = 'USER_ERROR' | 'SYSTEM_ERROR';
