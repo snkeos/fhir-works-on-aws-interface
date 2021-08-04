@@ -11,6 +11,7 @@ import { History } from './history';
 import { Persistence } from './persistence';
 import { Search } from './search';
 import { Validator } from './validator';
+import { MultiTenancyOptions } from './multiTenancyOptions';
 
 /**
  * http://www.hl7.org/fhir/smart-app-launch/conformance/index.html#using-cs
@@ -156,6 +157,7 @@ export interface FhirConfig {
     productInfo: ProductInfo;
     auth: Auth;
     server: Server;
+    multiTenancyOptions: MultiTenancyOptions;
     profile: Profile;
     validators: Validator[];
 }
