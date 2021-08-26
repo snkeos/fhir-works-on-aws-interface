@@ -151,6 +151,13 @@ export function getRequestInformation(
             if (path.length === 0) return { operation: 'transaction' };
             return { operation: 'create', resourceType: urlSplit[0] };
         }
+        case 'OPTIONS': {
+            return {
+                operation: 'cors',
+                resourceType: urlSplit[0],
+            };
+        }
+
         default: {
             throw new Error('Unable to parse the http verb');
         }
