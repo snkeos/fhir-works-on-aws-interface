@@ -61,8 +61,7 @@ export type TypeOperation =
     | 'patch'
     | 'history-type'
     | 'history-instance'
-    | 'search-type'
-    | 'cors';
+    | 'search-type';
 
 /**
  * System Operations
