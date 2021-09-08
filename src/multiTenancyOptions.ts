@@ -10,6 +10,7 @@ export interface MultiTenancyOptions {
     tenantUrlPart?: string;
     /**
      * The claim that has an array of tenant ids the logged in user has access to.
+
      * e.g. cognito user groups
      */
     tenantAccessTokenClaim?: string;
