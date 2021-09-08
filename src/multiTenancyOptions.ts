@@ -2,14 +2,15 @@ export interface MultiTenancyOptions {
     enabled: boolean;
 
     /**
-     * For url based multitenancy it allows to specifies a sub url part, like "tenant", "hospital" etc. or  Empty
+     * For url based multitenancy it allows to specify a sub url part, like "tenant", "hospital" etc. or  Empty
      * E.g.
-     *  - Named url part: <fhir serverbase url>/<tenantUrlPart>/{tennatId}/resourceType/{resourceId}
-     *  - Empty : <fhir serverbase url>/{tennatId}/resourceType/{resourceId}
+     *  - Named url part: <fhir serverbase url>/<tenantUrlPart>/{tenantId}/resourceType/{resourceId}
+     *  - Empty : <fhir serverbase url>/{tenantId}/resourceType/{resourceId}
      */
     tenantUrlPart?: string;
     /**
-     * array of tenant ids the logged in user has access to.
+     * The claim that has an array of tenant ids the logged in user has access to.
+
      * e.g. cognito user groups
      */
     tenantAccessTokenClaim?: string;
@@ -19,4 +20,8 @@ export interface MultiTenancyOptions {
      * This allows to include access control on tenants next to user groups, like practitioners....
      */
     tenantAccessTokenClaimValuePrefix?: string;
+    /**
+     * This optional option specifies a scope, which allows access to all tenants.
+     */
+    tenantAccessTokenAllTenantsScope?: string;
 }
