@@ -2,6 +2,64 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.3.0](https://github.com/awslabs/fhir-works-on-aws-interface/compare/v11.2.0...v11.3.0) (2021-10-27)
+
+
+### Features
+
+* add sessionId to search requests ([#87](https://github.com/awslabs/fhir-works-on-aws-interface/issues/87)) ([6284d53](https://github.com/awslabs/fhir-works-on-aws-interface/commit/6284d53bb44d6180b2d6304e42ba06aa9f5596cb))
+
+## [11.2.0](https://github.com/awslabs/fhir-works-on-aws-interface/compare/v11.1.0...v11.2.0) (2021-10-13)
+
+
+### Features
+
+* add requiresAccessToken to GetExportStatusResponse ([#85](https://github.com/awslabs/fhir-works-on-aws-interface/issues/85)) ([a9ad12c](https://github.com/awslabs/fhir-works-on-aws-interface/commit/a9ad12c8401952a47a2fafd2a1da294dc806df18))
+
+## [11.1.0](https://github.com/awslabs/fhir-works-on-aws-interface/compare/v11.0.0...v11.1.0) (2021-08-24)
+
+
+### Features
+
+* add routing for Conflict errors ([#81](https://github.com/awslabs/fhir-works-on-aws-interface/issues/81)) ([0b135ee](https://github.com/awslabs/fhir-works-on-aws-interface/commit/0b135eed7866215149b32c0887542f72dc7dac1a))
+
+
+### Bug Fixes
+
+* updating SmartStrategy interface to spec ([#80](https://github.com/awslabs/fhir-works-on-aws-interface/issues/80)) ([50b0a7e](https://github.com/awslabs/fhir-works-on-aws-interface/commit/50b0a7e322b1b3393574620539a83d137b706820))
+
+## [11.0.0](https://github.com/awslabs/fhir-works-on-aws-interface/compare/v10.0.0...v11.0.0) (2021-08-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* Removes ttlInSeconds from the persistence interface
+
+### Bug Fixes
+
+* add missing fhirServiceBaseUrl to AuthorizationBundleRequest ([#78](https://github.com/awslabs/fhir-works-on-aws-interface/issues/78)) ([3c56239](https://github.com/awslabs/fhir-works-on-aws-interface/commit/3c562396f54735053ea61a3f2127b079561279ff))
+
+
+* Remove ttlInSeconds ([#69](https://github.com/awslabs/fhir-works-on-aws-interface/issues/69)) ([4662772](https://github.com/awslabs/fhir-works-on-aws-interface/commit/466277287d7101f9aa841550faf9afde69cc1278))
+
+## [10.0.0](https://github.com/awslabs/fhir-works-on-aws-interface/compare/v9.1.0...v10.0.0) (2021-08-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* add required parameter allowedResourceTypes for group export
+
+### Features
+
+* add multi-tenancy and group export related fields ([#76](https://github.com/awslabs/fhir-works-on-aws-interface/issues/76)) ([65c90b1](https://github.com/awslabs/fhir-works-on-aws-interface/commit/65c90b10bf3a7de62886dc8e1f59ae0c5415cf1e)), closes [#70](https://github.com/awslabs/fhir-works-on-aws-interface/issues/70) [#71](https://github.com/awslabs/fhir-works-on-aws-interface/issues/71) [#72](https://github.com/awslabs/fhir-works-on-aws-interface/issues/72) [#73](https://github.com/awslabs/fhir-works-on-aws-interface/issues/73)
+
+## [9.1.0](https://github.com/awslabs/fhir-works-on-aws-interface/compare/v9.0.0...v9.1.0) (2021-08-05)
+
+
+### Features
+
+* Add ResourceConflictError ([#74](https://github.com/awslabs/fhir-works-on-aws-interface/issues/74)) ([fa3facc](https://github.com/awslabs/fhir-works-on-aws-interface/commit/fa3facc0b07230d15514f5aa27d422e33a1d0ae1))
+
 ## [9.0.0](https://github.com/awslabs/fhir-works-on-aws-interface/compare/v8.2.0...v9.0.0) (2021-05-11)
 
 

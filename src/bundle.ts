@@ -21,11 +21,9 @@ export interface BatchReadWriteRequest {
     id: string;
     vid?: string;
     resource: any;
-    ttlInSeconds?: number; // archive timestamp in Unix epoch time format in seconds
     // GET requests, only contains the URL of the resource
     fullUrl?: string;
     references?: Reference[];
-    tenantId?: string;
 }
 
 export interface BatchRequest {
@@ -47,10 +45,9 @@ export interface BatchReadWriteResponse {
     operation: TypeOperation | SystemOperation;
     resource: any;
     lastModified: string;
-    tenantId?: string;
 }
 
-export type BatchReadWriteErrorType = 'USER_ERROR' | 'SYSTEM_ERROR';
+export type BatchReadWriteErrorType = 'USER_ERROR' | 'SYSTEM_ERROR' | 'CONFLICT_ERROR';
 export interface BundleResponse {
     readonly success: boolean;
     readonly errorType?: BatchReadWriteErrorType;

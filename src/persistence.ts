@@ -9,7 +9,6 @@ export interface CreateResourceRequest {
     resourceType: string;
     resource: any;
     id?: string;
-    ttlInSeconds?: number; // archive timestamp in Unix epoch time format in seconds
     tenantId?: string;
 }
 
@@ -18,7 +17,6 @@ export interface UpdateResourceRequest {
     resourceType: string;
     resource: any;
     vid?: string; // used in version aware update
-    ttlInSeconds?: number; // archive timestamp in Unix epoch time format in seconds
     tenantId?: string;
 }
 
@@ -27,7 +25,6 @@ export interface PatchResourceRequest {
     resourceType: string;
     resource: any;
     vid?: string; // used in version aware patch
-    ttlInSeconds?: number; // archive timestamp in Unix epoch time format in seconds
     tenantId?: string;
 }
 
@@ -52,6 +49,7 @@ export interface DeleteResourceRequest {
 
 export interface ConditionalDeleteResourceRequest {
     resourceType: string;
+    tenantId?: string;
 }
 
 export interface Persistence {
