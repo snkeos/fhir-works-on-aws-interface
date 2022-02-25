@@ -15,7 +15,6 @@ export * from './implementationGuides';
 export * from './persistence';
 export * from './resourceMeta';
 export * from './search';
-export * from './multiTenancyOptions';
 export * from './utilities';
 export * from './errors/InvalidResourceError';
 export * from './errors/ResourceNotFoundError';

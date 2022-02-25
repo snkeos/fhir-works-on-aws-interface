@@ -11,7 +11,6 @@ import { History } from './history';
 import { Persistence } from './persistence';
 import { Search } from './search';
 import { Validator } from './validator';
-import { MultiTenancyOptions } from './multiTenancyOptions';
 
 /**
  * http://www.hl7.org/fhir/smart-app-launch/conformance/index.html#using-cs
@@ -176,6 +175,17 @@ export interface MultiTenancyConfig {
      * @example "nested.object.tenantId"
      */
     tenantIdClaimPath: string;
+
+    /**
+     * Due to cognito access token customisation limitation,
+     * the prefix helps to identify the tenant specific values in a claim.
+     * This allows to include access control on tenants next to user groups, like practitioners....
+     */
+    tenantIdClaimValuePrefix?: string;
+    /**
+     * This optional option specifies a scope, which allows access to all tenants.
+     */
+    grantAccessAllTenantsScope?: string;
 }
 
 export interface FhirConfig {
@@ -183,7 +193,6 @@ export interface FhirConfig {
     productInfo: ProductInfo;
     auth: Auth;
     server: Server;
-    multiTenancyOptions: MultiTenancyOptions;
     profile: Profile;
     validators: Validator[];
     multiTenancyConfig?: MultiTenancyConfig;
