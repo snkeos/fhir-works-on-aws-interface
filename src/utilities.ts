@@ -33,7 +33,7 @@ export function cleanAuthHeader(authorizationHeader?: string): string {
  * Returns everything before the query with the starting and ending '/' removed
  * ex: /Patient/?name=Joe -> Patient
  */
-export function cleanUrlPath(urlPath: string): string {
+function cleanUrlPath(urlPath: string): string {
     let path = urlPath.split('?')[0];
     if (path[0] === '/') {
         path = path.substr(1);

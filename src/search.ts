@@ -15,7 +15,6 @@ export interface GlobalSearchRequest {
     queryParams?: any;
     searchFilters?: SearchFilter[];
     tenantId?: string;
-
     /**
      * An optional session identifier. Search implementations may use this value to optimize search queries.
      */

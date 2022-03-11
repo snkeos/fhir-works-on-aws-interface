@@ -175,11 +175,9 @@ export interface MultiTenancyConfig {
      * @example "nested.object.tenantId"
      */
     tenantIdClaimPath: string;
-
     /**
-     * Due to cognito access token customisation limitation,
-     * the prefix helps to identify the tenant specific values in a claim.
-     * This allows to include access control on tenants next to user groups, like practitioners....
+     * The prefix helps to identify the tenant specific values in a custom claim.
+     * @example "tenant:" would identify the tenant value "tenant:12345" in "cognito:groups" claim
      */
     tenantIdClaimValuePrefix?: string;
     /**
